@@ -82,7 +82,10 @@ def run_query(query_statement, sql_connection):
     query_output = pd.read_sql(query_statement, conn)
     print(query_statement)
     print(query_output)
-    
+
+# Establish a connection outside the function
+connection = sqlite3.connect('Banks.db')
+
 run_query('SELECT * FROM Largest_banks', 'Banks.db')
 run_query('SELECT AVG(MC_GBP_Billion) FROM Largest_banks', 'Banks.db')
 run_query('SELECT Name from Largest_banks LIMIT 5', 'Banks.db')
