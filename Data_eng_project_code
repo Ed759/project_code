@@ -42,7 +42,6 @@ def extract(url, table_attribs):
     return df
 
 df = extract('https://web.archive.org/web/20230908091635 /https://en.wikipedia.org/wiki/List_of_largest_banks', ['Name', 'MC_USD_Billion'])
-#print(df)
 
 def transform(df, csv_path):
     ''' This function accesses the CSV file for exchange rate
