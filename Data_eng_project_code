@@ -133,11 +133,3 @@ log_progress('SQL queries completed')
 log_progress('processing complete')
 
 
-
-
-
-
-# Call load_to_db
-load_to_db(df, db_name, table_name)
-log_progress('Data loaded to Database as a table, Executing queries')
-
