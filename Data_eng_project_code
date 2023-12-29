@@ -123,3 +123,21 @@ log_progress('Data saved to CSV file')
 load_to_db(df, db_name, table_name)
 log_progress('Data loaded to Database as a table, Executing queries')
 
+# Call run_query
+run_query('SELECT * FROM Largest_banks', 'Banks.db')
+run_query('SELECT AVG(MC_GBP_Billion) FROM Largest_banks', 'Banks.db')
+run_query('SELECT Name from Largest_banks LIMIT 5', 'Banks.db')
+log_progress('SQL queries completed')
+
+# processing complete
+log_progress('processing complete')
+
+
+
+
+
+
+# Call load_to_db
+load_to_db(df, db_name, table_name)
+log_progress('Data loaded to Database as a table, Executing queries')
+
