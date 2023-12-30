@@ -32,7 +32,7 @@ def extract(url, table_attribs):
     for row in rows:
         col = row.find_all('td')
         if len(col) != 0:
-            name = col[1].find('a').text if col[1].find('title') else col[1].text
+            name = col[1].find('a').text if col[1][:-1}.find('title') else col[1].text
             MC_USD_Billion = col[2].contents[0][:-1]
             data_dict = {'Name': name,
                          'MC_USD_Billion': float(col[2].contents[0])}
